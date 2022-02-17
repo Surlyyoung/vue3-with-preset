@@ -1,4 +1,4 @@
-# hell-vue3-preset
+# hello-vue3-preset
 
 ## Project setup
 ```
