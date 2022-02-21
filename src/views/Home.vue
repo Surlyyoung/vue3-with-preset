@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <AppHeader></AppHeader>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <select class="select" name="country" id="country" v-model="country">
       <option value="" disabled selected>{{"请选择"}}</option>
@@ -13,11 +14,13 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import AppHeader from './header/index.vue';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    HelloWorld,
+    AppHeader,
   },
   data() {
     return {

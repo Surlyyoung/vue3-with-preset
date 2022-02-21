@@ -1,0 +1,42 @@
+.screen-header {
+    height: 79px;
+    width: 100%;
+    background-image: url("./images/header-new-bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    .screen-header_weather {
+        display: inline-block;
+        vertical-align: bottom;
+        width: 24px;
+    }
+    .screen-header_title {
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.769);
+        letter-spacing: 6px;
+        line-height: 2;
+    }
+
+    @keyframes headerAmina {
+        0% {
+            left: 658px;
+            transform: rotate(0deg);
+        }
+        100% {
+            left: 1102px;
+            transform: rotate(0deg);
+        }
+    }
+    .screen-header_line {
+        background-image: url('./images/1.png');
+        width: 159px;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 100px;
+        animation: headerAmina 5s linear 0s infinite alternate;
+        top: 8px;
+    }
+}
