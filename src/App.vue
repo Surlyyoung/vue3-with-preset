@@ -6,7 +6,20 @@
   <router-view/>
 </template>
 
+<script>
+// import { mapUtils } '@/utils/amap';
+// import { defineComponent } from '@vue/composition-api'
+
+// export default defineComponent({
+//   setup() {
+    
+//   },
+// })
+</script>
+
+
 <style lang="scss">
+@import "./assets/iconfont/iconfont.css";
 @import "app";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
