@@ -1,13 +1,6 @@
 <template>
   <div class="hello">
-    <h1>surlyyoung -- {{ msg }}</h1>
-    <!-- <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul> -->
+    <h1>{{ msg }}</h1>
     <h3 v-closeModel="doSomething">Animal List</h3>
     <!-- <AnimalsSearch :searchKey="searchKey" @update:searchKey="searchKey = $event"></AnimalsSearch> -->
     <AnimalsSearch v-model:searchKey="searchKey"></AnimalsSearch>
@@ -22,9 +15,9 @@ import useAnimalsList from '@/composables/useAnimalsList';
 import useAnimalsSearch from '@/composables/useAnimalsSearch';
 import useAnimalsFilter from '@/composables/useAnimalsFilter';
 
-import AnimalsList from '../components/animal/animalList.vue';
-import AnimalsSearch from '../components/animal/search.vue';
-import AnimalsFilter from '../components/animal/filter.vue';
+import AnimalsList from '../components/demo/animalList.vue';
+import AnimalsSearch from '../components/demo/search.vue';
+import AnimalsFilter from '../components/demo/filter.vue';
 
 export default {
   name: 'HelloWorld',

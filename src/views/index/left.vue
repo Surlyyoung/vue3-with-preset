@@ -13,7 +13,7 @@ import ATitle from '@/components/aTitle/index.vue'
 import EquipmentNumberTab from './components/equipment-number-tab/index.vue'
 
 export default {
-  name: 'Home',
+  name: 'Section-left',
   components: { 
     ATitle,
     EquipmentNumberTab,

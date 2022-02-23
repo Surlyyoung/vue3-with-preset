@@ -33,7 +33,7 @@ export default {
   name: 'index',
   data () {
     return {
-      title: '数据大屏模板',
+      title: '数据大屏模板-Vue3',
     }
   },
   setup() {

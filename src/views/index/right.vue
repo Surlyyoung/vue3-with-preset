@@ -1,6 +1,5 @@
 <template>
   <div class="index-right screen-right">
-    <!-- <aaaa :num="123456" :data="{todayBTNRate:99,todayGreenCount:2,todayYellowCount:33,todayRedCount:3333,todayTotalCount:123456}"></aaaa> -->
     <!-- <div class="video-wrapper">
       <VideoCard :options="{sources:[{src:'/live/cctv-13/1.m3u8', type: 'application/x-mpegURL'}]}"/>
     </div> -->
@@ -20,7 +19,7 @@ import EventStateTab from './components/event-state-tab/index.vue'
 import EventList from './components/event-list/index.vue'
 
 export default {
-  name: 'Home',
+  name: 'Section-right',
   components: { 
     // SwiperOne,
     // VideoCard,
@@ -30,7 +29,9 @@ export default {
   },
   data() {
     return {
-      eventStateTotal: {iconfont: 'iconshijian c-replace f-42', text: 2316, subText: '全部', textClass: 'c-replace f-24', subClass: 'c-fff f-14'},
+      eventStateTotal: {
+        iconfont: 'iconshijian c-replace f-42', text: 2316, subText: '全部', textClass: 'c-replace f-24', subClass: 'c-fff f-14',
+      },
       eventStateList: [
         {iconfont: 'iconchulizhong c-warning f-32 w-50', text: 2316, subText: '全部', textClass: 'c-warning f-24', subClass: 'c-fff f-14'},
         {iconfont: 'iconchaoshishijian c-danger f-32 w-50', text: 2316, subText: '全部', textClass: 'c-danger f-24', subClass: 'c-fff f-14'},

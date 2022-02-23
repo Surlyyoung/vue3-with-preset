@@ -1,5 +1,5 @@
 import { ref, onMounted, watch } from 'vue';
-import { fetchAnimalsList } from '@/api/helloworld';
+import { fetchAnimalsList } from '@/api/demo';
 
 /**
  * 获取列表模块
