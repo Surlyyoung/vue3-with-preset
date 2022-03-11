@@ -34,7 +34,7 @@ function createMap(obj = {}) {
   const sUsrAg = navigator.userAgent
   if (sUsrAg.indexOf('IE') > -1) delete mapDate.viewMode
   map = new AMap.Map(id, mapDate)
-  map.setFeatures(['bg','point']);  // 支持bg（地图背景）、point（兴趣点）、road（道路）、building（建筑物）
+  map.setFeatures(['bg','point','road','building']);  // 支持bg（地图背景）、point（兴趣点）、road（道路）、building（建筑物）
   // 地图点击事件
   map.on('click', (e) => {
     map.clearInfoWindow()

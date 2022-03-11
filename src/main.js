@@ -25,11 +25,11 @@ app.directive('closeModel', {
 
     // 给当前元素绑定个私有变量，方便在unbind中可以解除事件监听
     el.__vueClickOutside__ = clickHandler;
-    document.getElementById('app').addEventListener('click', clickHandler);
+    document.getElementById('app').addEventListener('click', clickHandler, true);
   },
   unmounted(el) {
     // 解除事件监听
-    document.getElementById('app').removeEventListener('click', el.__vueClickOutside__);
+    document.getElementById('app').removeEventListener('click', el.__vueClickOutside__, true);
     delete el.__vueClickOutside__;
   }
 })
