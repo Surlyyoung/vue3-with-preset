@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-use-before-define
-const {AMap} = window
+const { AMap } = window
 let map = null
 
 /**
@@ -19,7 +19,7 @@ let map = null
  * @return {object} map
  */
 function createMap(obj = {}) {
-  const {id, mapStyle, zoom, zooms, center, pitch, rotateEnable, rotation, viewMode} = obj
+  const { id, mapStyle, zoom, zooms, center, pitch, rotateEnable, rotation, viewMode } = obj
   const mapDate = {
     mapStyle: mapStyle || 'amap://styles/03a7886cb27fa09cdd38680f15e93dc7',
     zoom: zoom || 12,
@@ -34,7 +34,7 @@ function createMap(obj = {}) {
   const sUsrAg = navigator.userAgent
   if (sUsrAg.indexOf('IE') > -1) delete mapDate.viewMode
   map = new AMap.Map(id, mapDate)
-  map.setFeatures(['bg','point','road','building']);  // 支持bg（地图背景）、point（兴趣点）、road（道路）、building（建筑物）
+  map.setFeatures(['bg', 'point', 'road', 'building']);  // 支持bg（地图背景）、point（兴趣点）、road（道路）、building（建筑物）
   // 地图点击事件
   map.on('click', (e) => {
     map.clearInfoWindow()
@@ -59,7 +59,7 @@ const polygonObj = {}
  * @return {string} 唯一ID
  */
 function createPolygons(obj = {}) {
-  const {name, paths} = obj
+  const { name, paths } = obj
   const polygons = []
   paths.forEach((path) => {
     const polygon = new AMap.Polygon({
@@ -77,11 +77,11 @@ function createPolygons(obj = {}) {
     })
     polygon.on('mouseover', (e) => {
       console.log(e);
-      polygon.setOptions({fillOpacity: 0.5})
+      polygon.setOptions({ fillOpacity: 0.5 })
     })
     polygon.on('mouseout', (e) => {
       console.log(e);
-      polygon.setOptions({fillOpacity: 0})
+      polygon.setOptions({ fillOpacity: 0 })
     })
     polygons.push(polygon)
     map.add(polygon)
@@ -107,7 +107,7 @@ const clusterObj = {}
  * @return {string} 唯一ID
  */
 function createPoints(obj = {}) {
-  const {name, points, content, offset, clickBack, fitView} = obj
+  const { name, points, content, offset, clickBack, fitView } = obj
   const markers = []
   points.forEach((val) => {
     const lng = val.lng || val.longitude || val.lon
@@ -171,7 +171,7 @@ function clearMap(list = []) {
  * @return {undefined}
  */
 function changeCenter(obj = {}) {
-  const {lat, lng, zoom, pitch} = obj
+  const { lat, lng, zoom, pitch } = obj
   if (lat && lng) map.setCenter([lng, lat])
   if (zoom) map.setZoom(zoom)
   if (pitch) map.setPitch(pitch)

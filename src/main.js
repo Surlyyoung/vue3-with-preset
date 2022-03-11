@@ -19,7 +19,7 @@ app.directive('closeModel', {
       // 判断指令中是否绑定了函数
       if (!el.contains(e.target)) {
         // 如果绑定了函数 则调用那个函数，此处binding.value就是handleClose方法
-        if(typeof binding.value == 'function') binding.value(e);
+        if (typeof binding.value == 'function') binding.value(e);
       }
     }
 
